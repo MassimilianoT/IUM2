@@ -5,19 +5,19 @@
             @csrf
             @method('PATCH')
 
-            <x-form.input name="name" :value="old('name', $boardgame->name)"/>
+            <x-form.input name="name" label="Nome" :value="old('name', $boardgame->name)"/>
 
-            <x-form.input name="minPlayers" type="number" min=1 :value="old('minPlayers', $boardgame->minPlayers)" />
+            <x-form.input name="minPlayers" label="Numero di giocatori minimi" type="number" min=1 :value="old('minPlayers', $boardgame->minPlayers)" />
 
-            <x-form.input name="maxPlayers" type="number" min=1 :value="old('maxPlayers', $boardgame->maxPlayers)" />
+            <x-form.input name="maxPlayers" label="Numero di giocatori massimi" type="number" min=1 :value="old('maxPlayers', $boardgame->maxPlayers)" />
 
-            <x-form.input name="editor" :value="old('editor', $boardgame->editor)" />
+            <x-form.input label="Editore" name="editor" :value="old('editor', $boardgame->editor)" />
 
-            <x-form.textarea name="description">{{ old('description', $boardgame->description) }}</x-form.textarea>
+            <x-form.textarea label="Descrizione" name="description">{{ old('description', $boardgame->description) }}</x-form.textarea>
 
             <div class="flex mt-6">
                 <div class="flex-1">
-                    <x-form.input name="thumbnail" type="file" :value="old('thumbnail', $boardgame->thumbnail)"/>
+                    <x-form.input label="Immagini" name="thumbnail" type="file" :value="old('thumbnail', $boardgame->thumbnail)"/>
                 </div>
                 <img src="{{ asset('storage/' . $boardgame->thumbnail) }}" alt="" class="rounded-xl ml-6" width="100">
             </div>

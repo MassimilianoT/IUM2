@@ -4,18 +4,18 @@
         <form method="POST" action="/admin/boardgames" enctype="multipart/form-data">
             @csrf
 
-            <x-form.input name="name"/>
+            <x-form.input name="name" label="Nome"/>
 
-            <x-form.input name="minPlayers" type="number" min=1 />
+            <x-form.input label="Numero di giocatori minimi" name="minPlayers" type="number" min=1 />
 
-            <x-form.input name="maxPlayers" type="number" min=1 />
+            <x-form.input label="Numero di giocatori massimi" name="maxPlayers" type="number" min=1 />
 
-            <x-form.input name="editor"/>
+            <x-form.input label="Editore" name="editor"/>
 
-            <x-form.textarea name="description"/>
+            <x-form.textarea label="Descrizione" name="description"/>
 
             <x-form.field>
-                <x-form.label name="authors"/>
+                <x-form.label name="authors" label="Autori"/>
 
                 <div id="authorsList">
                     @foreach ($authors as $author)
@@ -32,7 +32,7 @@
             </x-form.field>
 
             <x-form.field>
-                <x-form.label name="categories"/>
+                <x-form.label name="categories" label="Categorie"/>
 
                 <div id="categoriesList">
                     @foreach ($categories as $category)
@@ -48,7 +48,7 @@
                 <x-form.error name="categories_id"/>
             </x-form.field>
 
-            <x-form.input name="thumbnail" type="file"/>
+            <x-form.input label="Immagine" name="thumbnail" type="file"/>
 
             <x-form.button>Crea</x-form.button>
         </form>
@@ -66,9 +66,9 @@
                     <form method="POST" class="space-y-6" action="">
                         @csrf
 
-                        <x-form.input name="firstName" />
+                        <x-form.input name="firstName" label="Nome"/>
 
-                        <x-form.input name="lastName" />
+                        <x-form.input name="lastName" label="Cognome"/>
 
                         <x-form.button id="createAuthor">Crea</x-form.button>
 
@@ -90,9 +90,9 @@
                     <form method="POST" class="space-y-6" action="">
                         @csrf
 
-                        <x-form.input name="categoryName"/>
+                        <x-form.input name="categoryName" label="Nome"/>
 
-                        <x-form.input name="slug"/>
+                        <x-form.input name="slug" label="Slug"/>
 
                         <x-form.button id="createCategory">Crea</x-form.button>
                     </form>

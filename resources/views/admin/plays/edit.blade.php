@@ -5,7 +5,7 @@
             @csrf
             @method('PATCH')
 
-            <x-form.input name="date" type="date" required="required" :value="old('date', $play->date)"/>
+            <x-form.input label="Data" name="date" type="date" required="required" :value="old('date', $play->date)"/>
 
             <x-form.field>
                 <x-form.label name="boardgame"/>

@@ -4,7 +4,7 @@
         <form method="POST" action="/plays" id="create_plays_form">
             @csrf
 
-            <x-form.input name="date" type="date" required="required"/>
+            <x-form.input label="Data" name="date" type="date" required="required"/>
 
             <x-form.field>
                 <x-form.label name="boardgame"/>

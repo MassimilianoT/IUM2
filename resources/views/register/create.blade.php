@@ -5,11 +5,11 @@
                 <h1 class="text-center font-bold text-xl">Registrati</h1>
                 <form method="POST" action="/register" class="mt-10">
                     @csrf
-                    <x-form.input name="firstName"/>
-                    <x-form.input name="lastName"/>
-                    <x-form.input name="username"/>
-                    <x-form.input name="email" type="email"/>
-                    <x-form.input name="password" type="password"/>
+                    <x-form.input label="Nome" name="firstName"/>
+                    <x-form.input label="Cognome" name="lastName"/>
+                    <x-form.input label="Username" name="username"/>
+                    <x-form.input label="E-Mail" name="email" type="email"/>
+                    <x-form.input label="Password" name="password" type="password"/>
                     <x-form.button>Registrati</x-form.button>
 
                     {{--                @if($errors->any())--}}

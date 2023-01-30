@@ -5,9 +5,9 @@
             @csrf
             @method('PATCH')
 
-            <x-form.input name="name" :value="old('name', $category->name)" />
+            <x-form.input label="Nome" name="name" :value="old('name', $category->name)" />
 
-            <x-form.input name="slug" :value="old('slug', $category->slug)"/>
+            <x-form.input label="Slug" name="slug" :value="old('slug', $category->slug)"/>
 
             <x-form.field>
                 <x-form.label name="boardgames"/>

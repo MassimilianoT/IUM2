@@ -3,12 +3,12 @@
         <form method="POST" action="/admin/authors" id="create_author">
             @csrf
 
-            <x-form.input name="firstName" />
+            <x-form.input name="firstName" label="Nome"/>
 
-            <x-form.input name="lastName" />
+            <x-form.input name="lastName" label="Cognome"/>
 
             <x-form.field>
-                <x-form.label name="boardgames"/>
+                <x-form.label name="boardgames" label="Giochi da Tavolo"/>
 
                 @foreach ($boardgames as $boardgame)
                     <input type="checkbox" name="boardgames_id[]" value={{ $boardgame->id }} id="boardgame_{{ $boardgame->id }}">

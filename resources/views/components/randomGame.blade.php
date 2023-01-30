@@ -48,7 +48,7 @@
                         <x-form.error name="author" />
                     </x-form.field>
 
-                    <x-form.input name="players" type="number" min=1 />
+                    <x-form.input label="Giocatori" name="players" type="number" min=1 />
 
                     <x-form.field>
                         <button type="submit"

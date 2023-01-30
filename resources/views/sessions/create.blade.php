@@ -6,9 +6,9 @@
                 <form method="POST" action="/login" class="mt-10">
                     @csrf
 
-                    <x-form.input type="email" name="email" autcomplete="username" />
+                    <x-form.input label="E-Mail" type="email" name="email" autcomplete="username" />
 
-                    <x-form.input type="password" name="password" autocomplete="new-password"/>
+                    <x-form.input label="Password" type="password" name="password" autocomplete="new-password"/>
 
                     <x-form.button>Log In</x-form.button>
 

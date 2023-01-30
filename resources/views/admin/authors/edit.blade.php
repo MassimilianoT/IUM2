@@ -5,12 +5,12 @@
             @csrf
             @method('PATCH')
 
-            <x-form.input name="firstName" :value="old('firstName', $author->firstName)" />
+            <x-form.input name="firstName" label="Nome" :value="old('firstName', $author->firstName)" />
 
-            <x-form.input name="lastName" :value="old('lastName', $author->lastName)"/>
+            <x-form.input name="lastName" label="Cognome" :value="old('lastName', $author->lastName)"/>
 
             <x-form.field>
-                <x-form.label name="boardgames"/>
+                <x-form.label name="boardgames" label="Giochi da tavolo"/>
 
                 @foreach ($boardgames as $boardgame)
                     @php
