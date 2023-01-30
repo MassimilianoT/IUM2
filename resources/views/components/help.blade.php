@@ -14,28 +14,30 @@
             </button>
             <div class="py-6 px-6 lg:px-8">
                 <h3 class="text-xl font-medium text-gray-900 dark:text-white">Hai bisogno di aiuto?</h3>
-                <h6 class="mb-4 text-xs font-medium text-gray-900 dark:text-white">Qui sotto trovi la descrizione delle funzionalità principali del sito</h6>
+                <h6 class="mb-4 text-xs font-medium text-gray-900 dark:text-white">Qui sotto trovi la descrizione delle
+                    funzionalità principali del sito</h6>
                 @auth
-                @can('admin')
-                <p class="mb-4">Ciao utente admin</p>
-                @endcan
+                    @can('admin')
+                        <p class="mb-4">Ciao utente admin</p>
+                    @endcan
 
-                @cannot('admin')
-                <p class="mb-4">Ciao utente registrato</p>
-                @endcannot
+                    @cannot('admin')
+                        <p class="mb-4">Ciao utente registrato</p>
+                    @endcannot
                 @else
                     <p class="mb-4 text-sm text-gray-700 dark:text-gray-300 text-justify">
                         Benvenuto visitatore.
-                        La pagina home che hai davanti presenta una lista di immagini che corrispondo a diversi giochi da tavolo. Da utente visitatore premendo sulle immagini puoi vedere i dettagli del gioco scelto. 
+                        La pagina home che hai davanti presenta una lista di immagini che corrispondo a diversi giochi
+                        da tavolo. Da utente visitatore premendo sulle immagini puoi vedere i dettagli del gioco scelto.
                         Inoltre puoi in alto a destra registrarti alla piattaforma oppure accedere con il tuo account.
                     </p>
                 @endauth
                 <button data-modal-toggle="help-modal" type="button"
-                            class="bg-gray-500 text-white uppercase font-semibold text-xs py-2 px-10 rounded-2xl hover:bg-gray-600 mx-auto">
-                            Chiudi
-                        </button>
+                        class="bg-gray-500 text-white uppercase font-semibold text-xs py-2 px-10 rounded-2xl hover:bg-gray-600 mx-auto">
+                    Chiudi
+                </button>
             </div>
-            
+
         </div>
     </div>
 </div>
