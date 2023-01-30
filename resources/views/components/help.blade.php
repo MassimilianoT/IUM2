@@ -24,7 +24,11 @@
                 <p class="mb-4">Ciao utente registrato</p>
                 @endcannot
                 @else
-                    <p class="mb-4 text-sm text-gray-700 dark:text-gray-300 text-justify">Per poter accedere alle funzionalità del sito devi prima registrarti e poi effettuare il login.</p>
+                    <p class="mb-4 text-sm text-gray-700 dark:text-gray-300 text-justify">
+                        Benvenuto visitatore.
+                        La pagina home che hai davanti presenta una lista di immagini che corrispondo a diversi giochi da tavolo. Da utente visitatore premendo sulle immagini puoi vedere i dettagli del gioco scelto. 
+                        Inoltre puoi in alto a destra registrarti alla piattaforma oppure accedere con il tuo account.
+                    </p>
                 @endauth
                 <button data-modal-toggle="help-modal" type="button"
                             class="bg-gray-500 text-white uppercase font-semibold text-xs py-2 px-10 rounded-2xl hover:bg-gray-600 mx-auto">
