@@ -16,22 +16,26 @@
                 <h3 class="text-xl font-medium text-gray-900 dark:text-white">Hai bisogno di aiuto?</h3>
                 <h6 class="mb-4 text-xs font-medium text-gray-900 dark:text-white">Qui sotto trovi la descrizione delle
                     funzionalità principali del sito</h6>
-                @auth
-                    @can('admin')
-                        <p class="mb-4">Ciao utente admin</p>
-                    @endcan
-
-                    @cannot('admin')
-                        <p class="mb-4">Ciao utente registrato</p>
-                    @endcannot
-                @else
-                    <p class="mb-4 text-sm text-gray-700 dark:text-gray-300 text-justify">
-                        Benvenuto visitatore.
-                        La pagina home che hai davanti presenta una lista di immagini che corrispondo a diversi giochi
-                        da tavolo. Da utente visitatore premendo sulle immagini puoi vedere i dettagli del gioco scelto.
-                        Inoltre puoi in alto a destra registrarti alla piattaforma oppure accedere con il tuo account.
-                    </p>
-                @endauth
+                <p class="mb-4 text-sm text-gray-700 dark:text-gray-300 text-justify">
+                    @auth
+                        @can('admin')
+                            Benvenuto amministratore.<br>
+                            Oltre alla possibilità di visualizzare la pagina home, puoi gestire i contenuti del
+                            sito (giochi da tavolo, autori, categorie, utenti e partite) tramite il tuo menù
+                            personale.<br>
+                            Il menù lo trovi cliccando sul simbolo ☰.
+                        @endcan
+                        @cannot('admin')
+                            Benvenuto {{ auth()->user()->firstName }} {{ auth()->user()->lastName }}.<br>
+                            
+                        @endcannot
+                    @else
+                            Benvenuto visitatore.<br>
+                            La pagina home che hai davanti presenta una lista di immagini che corrispondo a diversi giochi
+                            da tavolo. Da utente visitatore, premendo sulle immagini, puoi vedere i dettagli del gioco scelto.<br>
+                            Inoltre puoi in alto a destra registrarti alla piattaforma oppure accedere con il tuo account.
+                    @endauth
+                </p>
                 <button data-modal-toggle="help-modal" type="button"
                         class="bg-gray-500 text-white uppercase font-semibold text-xs py-2 px-10 rounded-2xl hover:bg-gray-600 mx-auto">
                     Chiudi
