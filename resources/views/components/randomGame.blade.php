@@ -22,7 +22,7 @@
                     <input type="hidden" name="user_id" value="{{ auth()->user()->id }}" />
 
                     <x-form.field>
-                        <x-form.label name="category" />
+                        <x-form.label name="category" label="Categoria"/>
 
                         <select name="category_id">
                             <option value=-1 selected>Seleziona una categoria</option>
@@ -35,7 +35,7 @@
                     </x-form.field>
 
                     <x-form.field>
-                        <x-form.label name="author" />
+                        <x-form.label name="author" label="Autore"/>
 
                         <select name="author_id">
                             <option value=-1 selected>Seleziona un autore</option>

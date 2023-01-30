@@ -29,7 +29,7 @@
                                                     @csrf
 
                                                     <x-form.field>
-                                                        <x-form.label name="vote"/>
+                                                        <x-form.label name="vote" label="Voto"/>
 
                                                         <select name="vote" required>
                                                             <option value=-1 disabled selected>Seleziona un voto da 1 a 10</option>

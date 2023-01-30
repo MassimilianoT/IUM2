@@ -10,7 +10,7 @@
             <x-form.input label="Slug" name="slug" :value="old('slug', $category->slug)"/>
 
             <x-form.field>
-                <x-form.label name="boardgames"/>
+                <x-form.label name="boardgames" label="Giochi da Tavolo"/>
 
                 @foreach ($boardgames as $boardgame)
                     @php

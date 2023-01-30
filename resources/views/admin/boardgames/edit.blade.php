@@ -23,7 +23,7 @@
             </div>
 
             <x-form.field>
-                <x-form.label name="authors"/>
+                <x-form.label name="authors" label="Autori"/>
 
                 @foreach ($authors as $author)
                     @php
@@ -44,7 +44,7 @@
             </x-form.field>
 
             <x-form.field>
-                <x-form.label name="categories"/>
+                <x-form.label name="categories" label="Categorie"/>
 
                 @foreach ($categories as $category)
                     @php

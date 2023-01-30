@@ -1,7 +1,7 @@
 @props(['label', 'name'])
 
 <x-form.field>
-    <x-form.label name="{{ $label }}"/>
+    <x-form.label name="{{ $label }}" label="{{ $label }}"/>
 
     <input class="border border-gray-200 p-2 w-full rounded"
            name="{{ $name }}"

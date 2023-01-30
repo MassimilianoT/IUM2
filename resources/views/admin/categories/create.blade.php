@@ -9,7 +9,7 @@
             <x-form.input label="Slug" name="slug" id="slug"/>
 
             <x-form.field>
-                <x-form.label name="boardgames"/>
+                <x-form.label name="boardgames" label="Giochi da Tavolo"/>
 
                 @foreach ($boardgames as $boardgame)
                     <input type="checkbox" name="boardgames_id[]" value={{ $boardgame->id }} id="boardgame_{{ $boardgame->id }}">

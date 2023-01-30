@@ -7,7 +7,7 @@
             <x-form.input label="Data" name="date" type="date" required="required"/>
 
             <x-form.field>
-                <x-form.label name="boardgame"/>
+                <x-form.label name="boardgame" label="Gioco da Tavolo"/>
 
                 <select name="boardgame_id">
                     @foreach ($boardgames as $boardgame)
@@ -22,7 +22,7 @@
             </x-form.field>
 
             <x-form.field>
-                <x-form.label name="players"/>
+                <x-form.label name="players" label="Giocatori"/>
 
                     @foreach ($users as $user)
                         <input type="checkbox" name="players_id[]" value={{ $user->id }} id="player_{{ $user->id }}">
@@ -33,7 +33,7 @@
             </x-form.field>
 
             <x-form.field>
-                <x-form.label name="winner"/>
+                <x-form.label name="winner" label="Vincitore"/>
 
                 <select name="winner_id" id="winner_id">
                     <option value=-1 disabled="disabled">Seleziona il vincitore</option>
