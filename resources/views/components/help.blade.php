@@ -20,19 +20,24 @@
                     @auth
                         @can('admin')
                             Benvenuto amministratore.<br>
-                            Oltre alla possibilità di visualizzare la pagina home, puoi gestire i contenuti del
-                            sito (giochi da tavolo, autori, categorie, utenti e partite) tramite il tuo menù
-                            personale.<br>
+                            Oltre alla possibilità di visualizzare la pagina home, puoi gestire i contenuti del sito (giochi da tavolo, autori, categorie, utenti e partite) tramite il tuo menù personale.<br>
                             Il menù lo trovi cliccando sul simbolo ☰.
                         @endcan
                         @cannot('admin')
                             Benvenuto {{ auth()->user()->firstName }} {{ auth()->user()->lastName }}.<br>
-                            
+                            La pagina home che hai davanti presenta una lista di immagini che corrispondo a diversi giochi da tavolo. <br>
+                            Da utente registrato, premendo sulle immagini, puoi vedere i dettagli del gioco scelto.<br>
+                            Inoltre, hai la possibilità di accedere al tuo menù personale (tasto ☰) per accedere alle funzionalità di:
+                            Aggiunta di una partita, Visualizzazione delle partite registrate e validate, Visualizzazione delle partite vinte e validate, Votazione dei giochi a cui si è già giocato.<br>
+                            Puoi farti suggerire un gioco dall'applicazione attraverso il pulsante "Consigliami un gioco!".<br>
+                            Se vorrai, potrai specificare dei filtri per aiutare l'applicazione a consigliarti il gioco giusto; in
+                            ogni caso ti verrà consigliato un gioco a cui non hai mai giocato e che rispetta gli, eventuali, filtri
+                            che hai impostato.
                         @endcannot
                     @else
                             Benvenuto visitatore.<br>
-                            La pagina home che hai davanti presenta una lista di immagini che corrispondo a diversi giochi
-                            da tavolo. Da utente visitatore, premendo sulle immagini, puoi vedere i dettagli del gioco scelto.<br>
+                            La pagina home che hai davanti presenta una lista di immagini che corrispondo a diversi giochi da tavolo. <br>
+                            Da utente visitatore, premendo sulle immagini, puoi vedere i dettagli del gioco scelto.<br>
                             Inoltre puoi in alto a destra registrarti alla piattaforma oppure accedere con il tuo account.
                     @endauth
                 </p>
