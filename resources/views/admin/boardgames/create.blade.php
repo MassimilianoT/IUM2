@@ -6,9 +6,9 @@
 
             <x-form.input name="name" label="Nome"/>
 
-            <x-form.input label="Numero di giocatori minimi" name="minPlayers" type="number" min=1/>
+            <x-form.input label="Numero minimo di giocatori" name="minPlayers" type="number" min=1/>
 
-            <x-form.input label="Numero di giocatori massimi" name="maxPlayers" type="number" min=1/>
+            <x-form.input label="Numero massimo di giocatori" name="maxPlayers" type="number" min=1/>
 
             <x-form.input label="Editore" name="editor"/>
 

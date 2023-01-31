@@ -7,9 +7,9 @@
 
             <x-form.input name="name" label="Nome" :value="old('name', $boardgame->name)"/>
 
-            <x-form.input name="minPlayers" label="Numero di giocatori minimi" type="number" min=1 :value="old('minPlayers', $boardgame->minPlayers)" />
+            <x-form.input name="minPlayers" label="Numero minimo di giocatori" type="number" min=1 :value="old('minPlayers', $boardgame->minPlayers)" />
 
-            <x-form.input name="maxPlayers" label="Numero di giocatori massimi" type="number" min=1 :value="old('maxPlayers', $boardgame->maxPlayers)" />
+            <x-form.input name="maxPlayers" label="Numero massimo di giocatori" type="number" min=1 :value="old('maxPlayers', $boardgame->maxPlayers)" />
 
             <x-form.input label="Editore" name="editor" :value="old('editor', $boardgame->editor)" />
 
