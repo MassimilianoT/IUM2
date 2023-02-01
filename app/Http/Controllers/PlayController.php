@@ -18,8 +18,8 @@ class PlayController extends Controller
 
     public function create() {
         return view('user.plays.create',[
-            'boardgames' => Boardgame::all(),
-            'users' => User::where('username', '!=', 'admin')->get()
+            'boardgames' => Boardgame::orderBy('name')->get(),
+            'users' => User::where('username', '!=', 'admin')->orderBy('lastName')->get()
         ]);
     }
 

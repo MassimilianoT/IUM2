@@ -12,7 +12,7 @@ class BoardgameController extends Controller
 {
     public function index(){
         return view('boardgames.index', [
-            'boardgames' => Boardgame::latest()->filter(
+            'boardgames' => Boardgame::orderBy('name')->filter(
                 request(['search'])
             )->simplePaginate()->withQueryString(),
         ]);

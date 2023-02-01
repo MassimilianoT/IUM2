@@ -12,14 +12,14 @@ class AdminBoardgameController extends Controller
 {
     public function index() {
         return view('admin.boardgames.index', [
-            'boardgames' => Boardgame::paginate(50)
+            'boardgames' => Boardgame::orderBy('name')->paginate(50)
         ]);
     }
 
     public function create() {
         return view('admin.boardgames.create', [
-            'authors' => Author::all(),
-            'categories' => Category::all(),
+            'authors' => Author::orderBy('lastName')->get(),
+            'categories' => Category::orderBy('name')->get(),
         ]);
     }
 
@@ -43,8 +43,8 @@ class AdminBoardgameController extends Controller
     public function edit(Boardgame $boardgame) {
         return view('admin.boardgames.edit', [
             'boardgame' => $boardgame,
-            'authors' => Author::all(),
-            'categories' => Category::all(),
+            'authors' => Author::orderBy('lastName')->get(),
+            'categories' => Category::orderBy('name')->get(),
         ]);
     }
 

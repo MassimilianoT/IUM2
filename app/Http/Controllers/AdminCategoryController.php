@@ -11,13 +11,13 @@ class AdminCategoryController extends Controller
 {
     public function index() {
         return view('admin.categories.index', [
-            'categories' => Category::paginate(50)
+            'categories' => Category::orderBy('name')->paginate(50)
         ]);
     }
 
     public function create() {
         return view('admin.categories.create', [
-            'boardgames' => Boardgame::all()
+            'boardgames' => Boardgame::orderBy('name')->get()
         ]);
     }
 
@@ -51,7 +51,7 @@ class AdminCategoryController extends Controller
     public function edit(Category $category) {
         return view('admin.categories.edit', [
             'category' => $category,
-            'boardgames' => Boardgame::all()
+            'boardgames' => Boardgame::orderBy('name')->get()
         ]);
     }
 

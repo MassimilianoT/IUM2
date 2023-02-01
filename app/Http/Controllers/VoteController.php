@@ -21,6 +21,7 @@ class VoteController extends Controller
                 $query->select('boardgame_id')->from('votes')->where('user_id', '=', $user->id);
             })
             ->select('boardgames.*')
+            ->orderBy('boardgames.name')
             ->get();
 
         return view('user.votes.index', [

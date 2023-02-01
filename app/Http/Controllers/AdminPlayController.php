@@ -12,7 +12,7 @@ class AdminPlayController extends Controller
 {
     public function index() {
         return view('admin.plays.index', [
-            'plays' => Play::paginate(50)
+            'plays' => Play::orderBy('date')->paginate(50)
         ]);
     }
 
@@ -41,8 +41,8 @@ class AdminPlayController extends Controller
     public function edit(Play $play) {
         return view('admin.plays.edit', [
             'play' => $play,
-            'boardgames' => Boardgame::all(),
-            'users' => User::all()
+            'boardgames' => Boardgame::orderBy('name')->get(),
+            'users' => User::orderBy('lastName')->get()
         ]);
     }
 
